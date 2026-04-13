@@ -27,5 +27,4 @@ graalvmNative {
 
 dependencies {
     implementation(libs.jacoco.cli)
-    implementation("args4j:args4j:2.0.28")
 }
