@@ -30,7 +30,7 @@ jobs:
             runner: windows-latest
             binary: jacoco-cli.exe
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: graalvm/setup-graalvm@v1
         with:
           java-version: '25'
