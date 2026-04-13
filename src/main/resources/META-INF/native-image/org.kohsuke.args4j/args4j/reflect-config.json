@@ -1,0 +1,136 @@
+[
+  {
+    "name": "org.jacoco.cli.internal.Main",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.jacoco.cli.internal.CommandHandler",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.jacoco.cli.internal.commands.Version",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.jacoco.cli.internal.commands.Dump",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.jacoco.cli.internal.commands.Instrument",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.jacoco.cli.internal.commands.Merge",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.jacoco.cli.internal.commands.Report",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.jacoco.cli.internal.commands.ClassInfo",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.jacoco.cli.internal.commands.ExecInfo",
+    "allDeclaredFields": true,
+    "allDeclaredMethods": true,
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.Option",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.kohsuke.args4j.Argument",
+    "allDeclaredMethods": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.BooleanOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.ByteOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.CharOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.DoubleOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.EnumOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.FileOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.FloatOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.IntOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.LongOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.ShortOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.StringOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.URIOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.URLOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.MapOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.InetAddressOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.PathOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.PatternOptionHandler",
+    "allDeclaredConstructors": true
+  },
+  {
+    "name": "org.kohsuke.args4j.spi.UuidOptionHandler",
+    "allDeclaredConstructors": true
+  }
+]

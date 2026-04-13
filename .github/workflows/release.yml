@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    name: Build ${{ matrix.os }}-${{ matrix.arch }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: linux
+            arch: x86_64
+            runner: ubuntu-latest
+            binary: jacoco-cli
+            artifact: jacoco-cli-linux-x86_64
+          - os: linux
+            arch: aarch64
+            runner: ubuntu-24.04-arm
+            binary: jacoco-cli
+            artifact: jacoco-cli-linux-aarch64
+          - os: macos
+            arch: aarch64
+            runner: macos-latest
+            binary: jacoco-cli
+            artifact: jacoco-cli-macos-aarch64
+          - os: windows
+            arch: x86_64
+            runner: windows-latest
+            binary: jacoco-cli.exe
+            artifact: jacoco-cli-windows-x86_64.exe
+    steps:
+      - uses: actions/checkout@v4
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '25'
+          distribution: 'graalvm'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build native image
+        run: ./gradlew nativeCompile
+      - name: Rename binary
+        shell: bash
+        run: mv build/native/nativeCompile/${{ matrix.binary }} ${{ matrix.artifact }}
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ matrix.artifact }}

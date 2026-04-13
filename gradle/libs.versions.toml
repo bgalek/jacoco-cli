@@ -1,0 +1,5 @@
+[versions]
+jacoco = "0.8.14"
+
+[libraries]
+jacoco-cli = { group = "org.jacoco", name = "org.jacoco.cli", version.ref = "jacoco" }

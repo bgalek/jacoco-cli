@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    name: Build ${{ matrix.os }}-${{ matrix.arch }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: linux
+            arch: x86_64
+            runner: ubuntu-latest
+            binary: jacoco-cli
+          - os: linux
+            arch: aarch64
+            runner: ubuntu-24.04-arm
+            binary: jacoco-cli
+          - os: macos
+            arch: aarch64
+            runner: macos-latest
+            binary: jacoco-cli
+          - os: windows
+            arch: x86_64
+            runner: windows-latest
+            binary: jacoco-cli.exe
+    steps:
+      - uses: actions/checkout@v4
+      - uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '25'
+          distribution: 'graalvm'
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build native image
+        run: ./gradlew nativeCompile
+      - name: Smoke test
+        shell: bash
+        run: ./build/native/nativeCompile/${{ matrix.binary }} version
